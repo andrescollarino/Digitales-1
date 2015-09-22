@@ -3,6 +3,7 @@
 *.qsf
 *.sci
 *.vhd.bak
+*.rpt
 
 #ignore Folders
 **/db/
