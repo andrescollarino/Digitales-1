@@ -2,7 +2,7 @@
 *.qws
 *.qsf
 *.sci
-*.back
+*.vhd.back
 
 #ignore Folders
 **/db/
