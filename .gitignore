@@ -1,3 +1,6 @@
 #Ignore extencion files
 
 *.db_info
+*.qws
+*.qsf
+*.sci
