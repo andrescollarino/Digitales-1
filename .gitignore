@@ -1,6 +1,17 @@
 #Ignore extencion files
-
-*.db_info
 *.qws
 *.qsf
 *.sci
+*.back
+
+#ignore Folders
+**/db/
+**/incremental_db/
+**/output_files/
+**/simulation/
+
+
+#Ignore file
+msim_transcript
+_vmake
+_info
