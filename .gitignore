@@ -8,7 +8,7 @@
 *.pin
 *.sof
 *.done
-
+*.pof
 
 #ignore Folders
 **/db/
