@@ -4,6 +4,10 @@
 *.sci
 *.vhd.bak
 *.rpt
+*.summary
+*.pin
+*.sof
+
 
 #ignore Folders
 **/db/
