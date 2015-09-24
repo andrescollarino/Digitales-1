@@ -9,6 +9,9 @@
 *.sof
 *.done
 *.pof
+*.smsg
+*.jdi
+*.sld
 
 #ignore Folders
 **/db/
