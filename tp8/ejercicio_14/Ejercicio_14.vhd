@@ -16,6 +16,7 @@ signal sEstadoActual : Estados := A;
 signal sEstadoFuturo : Estados := A;
 begin 
 
+	-- Esta es una maquina de MELY
 	process( clk , Y)
 	begin
 	
