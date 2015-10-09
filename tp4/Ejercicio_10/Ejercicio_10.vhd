@@ -21,7 +21,7 @@ begin
 			 "00" ;
 			 
 	BA <= sBA when EI = '0' else "00";
-	GS <= '1' when EI = '0' or I = "1111" else '0';
-	EO <= '1' when EI = '0' or I /= "1111" else '0';
+	GS <= '1' when EI = '1' or I = "1111" else '0';
+	EO <= '0' when EI = '0' and I = "1111" else '1';
 
 end Arhc_Ejercicio_10;
