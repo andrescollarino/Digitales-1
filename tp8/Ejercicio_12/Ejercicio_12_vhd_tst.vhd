@@ -56,12 +56,12 @@ variable c : std_logic := '0';
 
 BEGIN                                                        
               
-	Reset <= '0' , '1' after 20ns, '0' after 50ns;			  
+	Reset <= '0' , '1' after 20ns, '0' after 30ns , '1' after 60ns , '0' after 70 ns;			  
 	for i in 0 to 150 loop
 
 	ck <= c;
 	c := not c;
-	wait for 10ns;
+	wait for 5ns;
 	end loop;
 						 
 WAIT;                                                       
