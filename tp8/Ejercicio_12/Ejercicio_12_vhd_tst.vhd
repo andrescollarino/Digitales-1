@@ -56,7 +56,7 @@ variable c : std_logic := '0';
 
 BEGIN                                                        
               
-	Reset <= '0' , '1' after 10ns, '0' after 40ns;			  
+	Reset <= '0' , '1' after 20ns, '0' after 50ns;			  
 	for i in 0 to 150 loop
 
 	ck <= c;

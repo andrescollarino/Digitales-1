@@ -10,48 +10,49 @@ end Ejercicio_12;
 architecture Arch_Ejercicio_12 of Ejercicio_12 is 
 type stados is (A,B,C,D,E,F,G);
 signal sStado : stados := A;
-signal sFutureStado : stados := A;
+signal sSalida : std_logic_vector(7 downto 0) := x"00";
 begin
 
 	process(Reset , ck)
 	begin
-	
-			
-		if( rising_edge(ck)) then
-			
-			if( Reset = '1' ) then 
-				sFutureStado <= A;
-			end if;
-			
-			sStado <= sFutureStado;
-		end if;
-	
+		
 		-- Salida 
 		-- Rst R1 W R Wa R2 Ra W1 
-	
-		case sStado is
-			when A =>
-				Salida <= x"00";
-				sFutureStado <= B;
-			when B => 
-				Salida <= x"80";
-				sFutureStado <= C;
-			when C =>
-				Salida <= x"60";
-				sFutureStado <= D;
-			when D =>
-				Salida <= x"18";
-				sFutureStado <= E;
-			when E => 
-				Salida <= x"24";
-				sFutureStado <= F;
-			when F =>
-				Salida <= x"18";
-				sFutureStado <= G;
-			when G => 
-				Salida <= x"03";
-				sFutureStado <= A;
-		end case;
+		
+		if( rising_edge(ck)) then
+			if( Reset = '1' ) then 
+				sStado <= A;
+				sSalida <= x"00";
+			else 
+				case sStado is
+					when A =>
+						sSalida<= x"00";
+						sStado<= B;
+					when B => 
+						sSalida<= x"80";
+						sStado<= C;
+					when C =>
+						sSalida<= x"60";
+						sStado<= D;
+					when D =>
+						sSalida<= x"18";
+						sStado<= E;
+					when E => 
+						sSalida<= x"24";
+						sStado<= F;
+					when F =>
+						sSalida<= x"18";
+						sStado<= G;
+					when G => 
+						sSalida<= x"03";
+						sStado<= A;
+				end case;		 
+			end if;
+		end if;
+		
+		Salida <= sSalida;
+		
+		
 	end process;
 end Arch_Ejercicio_12;
 			
