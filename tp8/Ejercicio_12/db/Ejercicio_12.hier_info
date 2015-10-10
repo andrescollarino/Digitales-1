@@ -1,0 +1,13 @@
+|Ejercicio_12
+Reset => ~NO_FANOUT~
+Salida[0] <= Salida[0].DB_MAX_OUTPUT_PORT_TYPE
+Salida[1] <= Salida[1].DB_MAX_OUTPUT_PORT_TYPE
+Salida[2] <= Salida[2].DB_MAX_OUTPUT_PORT_TYPE
+Salida[3] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[4] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[5] <= Salida.DB_MAX_OUTPUT_PORT_TYPE
+Salida[6] <= Salida[6].DB_MAX_OUTPUT_PORT_TYPE
+Salida[7] <= Salida[7].DB_MAX_OUTPUT_PORT_TYPE
+ck => sStado~1.DATAIN
+
+

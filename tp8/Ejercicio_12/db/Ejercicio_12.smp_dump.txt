@@ -1,0 +1,10 @@
+
+State Machine - |Ejercicio_12|sStado
+Name sStado.G sStado.F sStado.E sStado.D sStado.C sStado.B sStado.A 
+sStado.A 0 0 0 0 0 0 0 
+sStado.B 0 0 0 0 0 1 1 
+sStado.C 0 0 0 0 1 0 1 
+sStado.D 0 0 0 1 0 0 1 
+sStado.E 0 0 1 0 0 0 1 
+sStado.F 0 1 0 0 0 0 1 
+sStado.G 1 0 0 0 0 0 1 
