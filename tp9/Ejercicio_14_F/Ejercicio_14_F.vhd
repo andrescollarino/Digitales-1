@@ -19,9 +19,9 @@ begin
 	
 	begin
 	
-		if falling_edge(ck) then
+		if rising_edge(ck) then
 			
-			sBuffer <= sBuffer(8 downto 0) & Entrada;
+			sBuffer <= Entrada & sBuffer(9 downto 1) ;
 		
 		end if;
 	
