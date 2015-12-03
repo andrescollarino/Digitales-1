@@ -10,7 +10,8 @@ port(
 end Ejercicio_14_B;
 
 architecture Ejercicio_14_B_Arch of Ejercicio_14_B is
-signal sC : integer range 0 to 68 := 0;
+constant CUENTA : integer := 68;
+signal sC : integer range 0 to CUENTA := 0;
 begin
 	
 	process(ck , Reset)
@@ -20,12 +21,18 @@ begin
 			if Reset = '1' then
 				sC <= 0;
 			else
-				sC <= sC + 1;
+			
+				if sC = CUENTA then
+					sC <= 0;
+				else
+					sC <= sC + 1; 
+				end if;
+				
 			end if;
 		end if;
 		
 	end process;
 	
-	TC <= '1' when sC = 68 else '0';
+	TC <= '1' when sC = CUENTA else '0';
 	
 end Ejercicio_14_B_Arch;

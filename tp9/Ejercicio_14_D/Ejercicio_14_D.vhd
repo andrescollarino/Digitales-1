@@ -37,9 +37,9 @@ begin
 	
 	case M is
 		when "01" => --Desplasamiento derecha
-			sQF <= SRI & sQ(n - 2 downto 0);
+			sQF <= sQ(n - 2 downto 0) & SRI;
 		when "10" => -- Desplasamiento isquierda
-			sQF <= sQ(n - 1 downto 1) & SLI ;
+			sQF <=  SLI & sQ(n - 1 downto 1);
 		when "11" => --Carga paralela
 			sQF <= D;
 		when others => sQF <= sQ; -- Retiene 
