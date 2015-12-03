@@ -10,7 +10,7 @@ port(
 end Ejercicio_14_G;
 
 architecture Ejercicio_14_G_Arch of Ejercicio_14_G is
-type secuencia is array (8 downto 0) of std_logic_vector(5 downto 0);
+type secuencia is array (0 to 8) of std_logic_vector(5 downto 0);
 
 signal sSecuencia : secuencia := ( o"45",o"31" ,o"26" ,o"44" ,o"41" ,o"11",o"30",o"22", o"06");
 signal sIndex : integer range 0 to 8 := 0;
